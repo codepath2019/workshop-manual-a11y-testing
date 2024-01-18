@@ -72,20 +72,26 @@
   position: absolute;
   width: 100%;
 }
-.megamenu-navitem {
-  color: var(--color-accent-mediumdark);
+
+button.megamenu-navitem {
+  background-color: transparent;
+  border: none;
+  color: inherit;
   cursor: pointer;
+  display: inline-block;
   font-size: 0.9rem;
+  margin: 0;
   padding: 1.9em;
   position: relative;
 }
+
 .megamenu-section:first-of-type .megamenu-navitem {
   margin-left: 300px;
 }
 .megamenu-submenu {
   background-color: var(--bgcolor-menu);
   color: var(--color-primary-light);
-  display: flex;
+  display: none;
   font-size: 0.85rem;
   height: 0;
   left: 0;
@@ -95,6 +101,11 @@
   position: absolute;
   width: 100%;
 }
+
+.megamenu-section.active .megamenu-submenu {
+  display: flex;
+}
+
 .megamenu-section:hover .megamenu-navitem {
   background-color: #f2f2f3;
 }
