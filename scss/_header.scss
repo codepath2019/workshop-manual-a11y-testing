@@ -93,10 +93,8 @@ button.megamenu-navitem {
   color: var(--color-primary-light);
   display: none;
   font-size: 0.85rem;
-  height: 0;
   left: 0;
   max-width: var(--width-wide);
-  opacity: 0;
   overflow: hidden;
   position: absolute;
   width: 100%;
@@ -115,7 +113,7 @@ button.megamenu-navitem {
   overflow: hidden;
   z-index: 1;
 }
-.megamenu-section:hover .megamenu-navitem:after {
+.megamenu-section.active .megamenu-navitem:after {
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
   border-bottom: 4px solid black;
