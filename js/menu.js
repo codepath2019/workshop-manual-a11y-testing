@@ -12,7 +12,6 @@ function load() {
   menuItems.forEach((menuItem, index) => {
     let parentElement = menuItem.parentNode;
     menuItem.addEventListener("click", function (event) {
-      console.log(menuItem);
       resetSubmenus(event);
 
       // Add active menu for the item clicked
@@ -20,6 +19,14 @@ function load() {
         parentElement.classList.add("active");
       } else {
         parentElement.classList.remove("active");
+      }
+    });
+  });
+
+  submenus.forEach((submenu) => {
+    submenu.addEventListener("keyup", function (event) {
+      if (event.key === "Escape") {
+        submenu.classList.remove("active");
       }
     });
   });
