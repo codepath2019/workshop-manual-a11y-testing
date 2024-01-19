@@ -27,6 +27,7 @@ function load() {
     submenu.addEventListener("keyup", function (event) {
       if (event.key === "Escape") {
         submenu.classList.remove("active");
+        submenu.querySelector(".megamenu-navitem").focus();
       }
     });
   });
